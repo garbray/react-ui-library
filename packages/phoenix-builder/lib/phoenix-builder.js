@@ -4,11 +4,12 @@ const rollup = require("rollup");
 const path = require("path");
 const resolve = require("@rollup/plugin-node-resolve").default;
 const babel = require("@rollup/plugin-babel").default;
+const postcss = require("rollup-plugin-postcss");
 
 const currentWorkingPath = process.cwd();
-const { main, name } = require(path.join(currentWorkingPath, "package.json"));
+const { src, name } = require(path.join(currentWorkingPath, "package.json"));
 
-const inputPath = path.join(currentWorkingPath, main);
+const inputPath = path.join(currentWorkingPath, src);
 
 //little workaround to get package name without scope
 const fileName = name.replace("@garbray/", "");
@@ -22,6 +23,11 @@ const inputOptions = {
     babel({
       presets: ["@babel/preset-env", "@babel/preset-react"],
       babelHelpers: "bundled",
+      exclude: "node_modules/**",
+    }),
+    postcss({
+      // key configuration
+      modules: true,
     }),
   ],
 };

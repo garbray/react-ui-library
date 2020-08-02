@@ -1,11 +1,13 @@
 {
-  "name": "@garbray/phoenix-button",
+  "name": "@garbray/phoenix-text",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Bryan Garzon <bryan.garzon@ticketmaster.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/phoenix-button.js",
+  "main": "dist/phoenix-button.cjs.js",
+  "module": "dist/phoenix-button.esm.js",
+  "src": "lib/phoenix-button.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

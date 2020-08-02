@@ -2,7 +2,7 @@
   "name": "react-ui-library",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Bryan Garzon <bryan.garzon@ticketmaster.com>",
+  "author": "Bryan Garzon <bryangarzonb@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.0",
@@ -11,6 +11,7 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
+    "gh-pages": "^3.1.0",
     "lerna": "^3.22.1"
   },
   "dependencies": {},
@@ -19,6 +20,6 @@
     "test": "echo no test specified",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "npm run build-sotrybook && gh-pages -d storybook-static"
+    "deploy": "npm run build-storybook && gh-pages -d storybook-static"
   }
 }
